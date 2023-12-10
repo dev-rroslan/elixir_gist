@@ -100,4 +100,4 @@ COPY --from=builder --chown=nobody:root /app/_build/${MIX_ENV}/rel/elixir_gist .
 
 USER nobody
 
-CMD ["/app/bin/start"]
+CMD ["/app/bin/server"]
