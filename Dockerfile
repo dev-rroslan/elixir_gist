@@ -11,7 +11,7 @@
 #   - https://pkgs.org/ - resource for finding needed packages
 #   - Ex: hexpm/elixir:1.15.4-erlang-26.0.2-debian-bullseye-20230612-slim
 #
-ARG ELIXIR_VERSION=1.15.7
+ARG ELIXIR_VERSION=1.15.7-otp-26
 ARG OTP_VERSION=26.1.2
 ARG DEBIAN_VERSION=bullseye-20230612-slim
 
@@ -96,7 +96,7 @@ RUN chown nobody /app
 ENV MIX_ENV="prod"
 
 # Only copy the final release from the build stage
-COPY --from=builder --chown=nobody:root /app/_build/${MIX_ENV}/rel/liveview_mastery ./
+COPY --from=builder --chown=nobody:root /app/_build/${MIX_ENV}/rel/elixir_gist ./
 
 USER nobody
 
