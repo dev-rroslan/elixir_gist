@@ -63,7 +63,7 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.39.5/install.sh | b
 ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 
 # compile assets
-RUN mix cmd npm install --prefix assets
+#RUN mix cmd npm install --prefix assets
 RUN mix assets.deploy
 
 # Compile the release
