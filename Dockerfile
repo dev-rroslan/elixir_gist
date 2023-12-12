@@ -63,7 +63,7 @@ COPY assets assets
 #ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 
 # compile assets
-RUN cd npm install --prefix assets
+RUN cd assets && npm install
 RUN mix assets.deploy
 
 # Compile the release
