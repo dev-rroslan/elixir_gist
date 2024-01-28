@@ -105,7 +105,7 @@ if config_env() == :prod do
   #
 config :elixir_gist, ElixirGist.Mailer,
   adapter: Swoosh.Adapters.Brevo,
-  api_key: System.get_env("BREVO_API_KEY"),
+  api_key: System.get_env("BREVO_API_KEY")
   #       domain: System.get_env("MAILGUN_DOMAIN")
   #
   # For this example you need include a HTTP client required by Swoosh API client.
