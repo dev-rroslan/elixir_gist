@@ -8,7 +8,7 @@ defmodule ElixirGist.Accounts.UserNotifier do
     email =
       new()
       |> to(recipient)
-      |> from({"ElixirGist", "roslan@undi.online"})
+      |> from({"ElixirGist", "contact@example.com"})
       |> subject(subject)
       |> text_body(body)
 
